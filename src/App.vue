@@ -16,46 +16,46 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const display = ref('');
+const display = ref("");
 const buttons = [
-  { value: 'AC', type: 'clear' },
-  { value: 'DEL', type: 'delete' },
-  { value: '.', type: 'operator' },
-  { value: '/', type: 'operator' },
+  { value: "AC", type: "clear" },
+  { value: "DEL", type: "delete" },
+  { value: ".", type: "operator" },
+  { value: "/", type: "operator" },
 
-  { value: '7' },
-  { value: '8' },
-  { value: '9' },
-  { value: '*', type: 'operator' },
+  { value: "7" },
+  { value: "8" },
+  { value: "9" },
+  { value: "*", type: "operator" },
 
-  { value: '4' },
-  { value: '5' },
-  { value: '6' },
-  { value: '-', type: 'operator' },
+  { value: "4" },
+  { value: "5" },
+  { value: "6" },
+  { value: "-", type: "operator" },
 
-  { value: '1' },
-  { value: '2' },
-  { value: '3' },
-  { value: '+', type: 'operator' },
+  { value: "1" },
+  { value: "2" },
+  { value: "3" },
+  { value: "+", type: "operator" },
 
-  { value: '000' },
-  { value: '00' },
-  { value: '0' },
-  { value: '=', type: 'equals' },
+  { value: "000" },
+  { value: "00" },
+  { value: "0" },
+  { value: "=", type: "equals" },
 ];
 
 function updateDisplay(value) {
-  if (value === 'AC') {
-    return (display.value = '');
+  if (value === "AC") {
+    return (display.value = "");
   }
 
-  if (value === 'DEL') {
+  if (value === "DEL") {
     return (display.value = display.value.slice(0, -1));
   }
 
-  if (value === '=') {
+  if (value === "=") {
     return (display.value = eval(display.value));
   }
 
@@ -69,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #bf4d5d;
+  background: #ccc;
 }
 
 .calculator {
